@@ -1,0 +1,22 @@
+<html>
+<head>
+<SCRIPT TYPE="text/javascript">
+    function popup(mylink, windowname) {
+                
+                playerWindow = window.open(
+                                "timestamp.php",
+                                "player",
+                                "width=847px,height=365px,toolbar=no,menubar=no,status=no,resizable=0,fullscreen=no"
+                );
+                if( !playerWindow ) {
+                        jfAlert("Test Alert!");
+                        return false;
+                }
+                playerWindow.focus();
+    }
+</SCRIPT>
+</head>
+<h1>Pop-up Test</h1>
+
+<BODY onLoad="popup('hi', 'ad')">
+</body>

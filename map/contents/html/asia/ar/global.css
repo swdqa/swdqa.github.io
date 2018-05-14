@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+    a{
+	color:#000000;
+	
+	}
+	a.hover{
+	color:#3300ff;
+	
+	}
+	a:visited{
+	
+	text-decoration:none;
+	}

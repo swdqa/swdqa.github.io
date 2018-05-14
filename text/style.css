@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	background-color: pink;
+	color: black;		
+	font-family: sans-serif;
+	font-size:14px;
+}
+
+a {
+	color: #0077AA;
+	text-decoration: none;		
+}
+
+a:hover {
+	color: red;		
+}
+
+input {
+	font-size:14px;
+	font-color:purple;
+}
+
+h1 {
+	margin: 0px auto;
+}
+
+h1 span {
+}		
+
+h2 {
+	margin: 0px;
+}
+
+div.basicStyle {
+	border: 2px solid black; 
+	padding: 4px; 
+	margin-right: 5px; 
+	background-color: #C7D7FF;
+}
+
+.focused {
+	border: 1px dashed grey;
+}
+
+table {
+	font-size:12px;
+}
+
+_table, _th, _td {
+	border: 1px solid black;
+	border-color:gray;
+}
+
+
