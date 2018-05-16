@@ -11,18 +11,22 @@ body center table tr {
 h2 {
 	font-family: Georgia, Times New Roman, Times, serif;
 }
-    a{
-	color:#000000;
-	
-	}
-	a.hover{
-	color:#3300ff;
-	
-	}
-	a:visited{
-	
-	text-decoration:none;
-	}
+a{
+color:#000000;
+
+}
+a.hover{
+color:#3300ff;
+
+}
+a:visited{
+
+text-decoration:none;
+}
+
+div{
+	margin-top:10px;
+}
 </style>
 </head>
 
@@ -58,7 +62,19 @@ h2 {
 <form action="">
   <input type="radio" name="gender" value="male"> Male<br>
   <input type="radio" name="gender" value="female"> Female<br>
-  <input type="radio" name="gender" value="other"> Other
+  <input type="radio" name="gender" value"other"> Other
+  <div>
+	  <label for="number">숫자 폼</label>
+	  <input type="number" name="number">
+  </div>
+  <div>
+	  <label for="text">텍스트 폼</label>
+	  <input type="text" name="text">
+  </div>
+  <div>
+	  <label for="text_area">Text Area</label>
+	  <textarea name="text_area" id="text_area" cols="30" rows="10"></textarea>
+  </div>
 </form>
 
 </div>
