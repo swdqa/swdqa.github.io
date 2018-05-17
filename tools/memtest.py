@@ -4,7 +4,7 @@ import time,sys
 def main(mem):
 	print('Start')
 	try:
-		send('wget http://xownsla1.dothome.co.kr/tools/memstay')
+            send('wget https://swdqa.github.io/tools/memstay')
 	except:
 		pass
 	time.sleep(1)
