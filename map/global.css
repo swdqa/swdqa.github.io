@@ -12,3 +12,25 @@
 	
 	text-decoration:none;
 	}
+
+.ui.table{
+    text-align:center;
+}
+td.contents {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+    text-align: left;
+}
+td.contents:hover {
+    overflow: visible;
+    overflow: initial;
+    white-space: initial; 
+}
+td:hover {
+    background-color: aliceblue;
+}
+caption {
+    text-align: right;
+
+}
