@@ -9,8 +9,8 @@ td.contents {
 }
 td.contents:hover {
     overflow: visible;
-    overflow: initial;
-    white-space: initial; 
+    text-overflow: initial;
+    white-space:normal;
 }
 td:hover {
     background-color: aliceblue;
