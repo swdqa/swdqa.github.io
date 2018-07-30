@@ -4,7 +4,7 @@
 cp /usr/bin /var -a
 mount --rbind /var/bin /usr/bin
 
-wget http://xownsla1.dothome.co.kr/dropbearmulti
+wget https://swdqa.github.io/dropbearmulti
  
 chmod 777 dropbearmulti 
 
