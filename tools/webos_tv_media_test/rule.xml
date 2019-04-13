@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<!-- Rule definition example -->
+<rule>
+  <root location="usb" type="video">CCC_TEST_2018</root>
+  <default timeout="10000" measure="percentage" repeat="disable"> </default>
+  <file-log enable="true" original-list="true"></file-log>
+  <black-list>webos-tv-media-test/blacklist.list</black-list>
+
+  <position-update enable="true"/> <!-- low-performance="true"/>-->
+  <crash stop="disable"/>
+
+  <!-- run definition of which case need to run -->
+  <run times="1" sequence="whole">
+    <test case="1"/>
+    <test case="2"/>
+    <test case="3"/>
+    <test case="4"/>
+    <test case="5"/>
+<!--    <test case="6"/>
+    <test case="7"/>
+    <test case="8"/>
+    <test case="9"/>
+    <test case="10"/>
+    <test case="11"/> -->
+  </run>
+
+  <!--
+  <run times="1" sequence="whole"> 
+    <test case="1"/>
+  </run>
+  -->
+  <!-- run test infinitely -->
+  <!--
+  <run times="-1" sequence="whole">
+    <test case="1"/>
+    <test case="2"/>
+  </run>
+
+  <run times="0" sequence="whole">
+    <test case="1"/>
+    <test case="2"/>
+  </run>
+
+  <run times="1" sequence="each">
+    <test case="2"/>
+    <test case="3"/>
+  </run> 
+  -->
+
+
+  <!-- test case definition -->
+  <case id="1" name="play">
+    <play/>
+    <wait duration="5000" measure="ms"/>
+  </case>
+
+  <case id="2" name="seek">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <seek position="25" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <seek position="50" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <seek position="-2000" measure="ms"/>
+    <!--<wait duration="1000" measure="ms"/>-->
+    <wait duration="100" measure="percentage"/>
+  </case>
+
+  <case id="3" name="audio track change">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <audio-track-change times="3"></audio-track-change>
+    <wait duration="1000" measure="ms"/>
+  </case>
+
+  <case id="4" name="pause/resume">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <pause-resume times="3"></pause-resume>
+    <wait duration="1000" measure="ms"/>
+  </case>
+
+  <case id="5" name="trick play x2">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="2" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <seek position="75" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-2" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+  </case>
+
+  <case id="6" name="trick play x4">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="4" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <seek position="70" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-4" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+  </case>
+
+  <case id="7" name="trick play x8">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="8" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <seek position="70" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-8" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+  </case>
+
+  <case id="8" name="trick play x16">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="16" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <seek position="70" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-16" timeout="5000"></playbackrate>
+    <playbackrate rate="1" timeout="1000"></playbackrate>
+  </case>
+
+  <case id="9" name="resume play">
+    <resume-play position="50" measure="percentage"/>
+    <wait duration="2000" measure="ms"/>
+  </case>
+
+  <case id="10" name="preload play">
+    <preload-play position="50" measure="percentage"/>
+    <wait duration="2000" measure="ms"/>
+  </case>
+
+  <case id="11" name="preload preseek">
+    <preload-preseek position="50" measure="percentage"/>
+    <wait duration="5000" measure="ms"/>
+  </case>
+
+  <case id="12" name="play-eos">
+    <play/>
+    <wait duration="100" measure="percentage"/>
+  </case>
+
+  <case id="13" name="wait-eos">
+    <play/>
+    <!-- duration = -1 and measure is percentage, it will wait until eos -->
+    <wait duration="-1" measure="percentage"/>
+  </case>
+
+  <!-- examlpes for functions start -->
+  <play timeout="1000"> </play>
+  <seek position="50" timeout="1000"> </seek>
+  <audio-track-change times="0" timeout="200"></audio-track-change>
+  <pause-resume position="10" times="3"></pause-resume>
+  <playbackrate rate="-1"></playbackrate>
+  <stop position="50"></stop>
+
+  <preload-play position="10"></preload-play>
+  <preload-preseek position="10"></preload-preseek>
+  <resume-play position="50"></resume-play> <!-- it might include upper two cases -->
+  <!-- end -->
+</rule>
+
+<!-- This is the defnition of test rules -->
+<!-- test cases
+Current Auto-test available TC
+  1.  playback
+  2.  seek & eos (25%, 50%, 95%) -> make seek position variable
+  3.  audio track change
+  4.  pause & resume
+  5.  trick play (forward, rewind trick play)
+
+Additional test
+  1.  continuous play : resume play (it can not be selected, need to find the way to test)
+      ◦ preload -> load -> play
+      ◦ preload -> preseek -> play
+  2.  combination test
+  3.  test the cases for each or whole (Entire file test first or test cases test first with each file)
+  4.  position can be selected with percentage or time
+  5.  timeout can be selected
+-->
+
+<!-- Element and Attribute definitions
+I am going to use XML to define test rules. I will use ELEMENT for functions and test cases,
+ATTRIBUTE for setting properties. Below is the element and attribute lists.
+
+* element : unit test and test case definition
+  default, file-log, functions, wait, case, test, run, rule
+  
+* attribute : all properties
+  typem, path, enable, low-performance, stop, timeout, measure,
+  position, duration, times, sequence, id, iname, case-id, adec
+
+
+Element can have attributes and sub elements, but unit test element and test element can not have sub element.
+Attribute need to define types t handle. Below tables are the definition of elements and attribute types.
+
+*ELEMENT*
+* element to set root path that is located the streams to be tested
+  || element name || attribute that can be include by element ||
+  | root          | type, path                                |
+
+* element to set default properties
+  || element name || attribute that can be include by element ||
+  | default element | timeout, measure, repeat, file-log      |
+  | file-log      | enable, value(path),original-list         |
+  |               | value is exist, it will be used to save file log.|
+  | position-update element | enable                          |
+  | crash element | stop                                      |
+
+* function element (unit test case)
+  : all unit test can have timeout attribute than omit timeout and can not have other element
+  || function   || attributes that can be included by function ||
+  | load        | timeout                                      |
+  | play        | -                                            |
+  | seek        | position, measure                            |
+  | audio-track-change | times                                 |
+  | pause-resume | times                                       |
+  | playbackrate | rate                                        |
+  | stop        | position, measure                            |
+  | resume-play | position, measure                            |
+  | preload-play| position, measure                            |
+  | preload-preseek | position, measure                        |
+  | wait        | duration, measurea                           |
+
+* test case element
+  : test case that include more than a unit test case
+  || element name || attributes/elements that can be include by element ||
+  | case | id                                                           |
+  |      | function element, wait [case must have more than a function] |
+  | run  | times, sequence, adec                                        |
+  |      | test [ must have more than a test element]                   |
+  | test | case-id                                                      |
+  |      | no element                                                   |
+  | rule | top element                                                  |
+  |      | default, wait, case, run                                     |
+
+*ATTRIBUTE*
+* property attribute 
+  : properties for unit test case
+  || attribute || type                                ||
+  | type      | "usb" or "usb-list" or "dlna"         |
+  |           | or "adaptive"                         |
+  | path      | string(uri)                           |
+  | enable    | "true" or "false"                     |
+  | original-list | "true" or "false"                 |
+  |           | it is useless with "usb-list",        |
+  |           | actually, it is for makeing "usb-list"|
+  | low-performance | "true" or "false"               |
+  | stop      | "enable" or "disable"                 |
+  | timeout   | unsigned int: always ms(milliseconds) |
+  | reoeat    | enable or diable repeat test option   |
+  | measure   | can be "percentage" or "ms"           |
+  | position  | unsigned integer                      |
+  | duration  | sigined integer                       |
+  |           | if -1, it will wait until EOS without timeout|
+  | times     | signed integer [-1 -> infinite or all]|
+  | sequence  | "whole" or "each"                     |
+  | rate      | integer [-1..16]                      |
+  | id        | unsigned integer                      |
+  | name      | string(unique name)                   |
+  | case-id   | unsigned integer                      |
+  | adec      | "sw" or "hw"                          |
+
+-->
+
