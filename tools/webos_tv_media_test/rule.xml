@@ -1,10 +1,8 @@
 <?xml version="1.0"?>
 <!-- Rule definition example -->
 <rule>
-  <root location="usb" type="video">CCC_TEST_2018</root>
-  <default timeout="10000" measure="percentage" repeat="disable"> </default>
-  <file-log enable="true" original-list="true"></file-log>
-  <black-list>webos-tv-media-test/blacklist.list</black-list>
+  <root type="usb">salmon</root>
+  <default timeout="10000" measure="percentage" repeat="disable" file-log="enable"> </default>
 
   <position-update enable="true"/> <!-- low-performance="true"/>-->
   <crash stop="disable"/>
@@ -16,37 +14,33 @@
     <test case="3"/>
     <test case="4"/>
     <test case="5"/>
-<!--    <test case="6"/>
+    <test case="6"/>
     <test case="7"/>
     <test case="8"/>
     <test case="9"/>
     <test case="10"/>
-    <test case="11"/> -->
+    <test case="11"/>
   </run>
 
-  <!--
-  <run times="1" sequence="whole"> 
-    <test case="1"/>
-  </run>
-  -->
   <!-- run test infinitely -->
   <!--
   <run times="-1" sequence="whole">
     <test case="1"/>
     <test case="2"/>
   </run>
-
+  <run times="1" sequence="whole" adec="hw">
+    <test case="1"/>
+    <test case="2"/>
+  </run>
   <run times="0" sequence="whole">
     <test case="1"/>
     <test case="2"/>
   </run>
-
   <run times="1" sequence="each">
     <test case="2"/>
     <test case="3"/>
-  </run> 
+  </run>
   -->
-
 
   <!-- test case definition -->
   <case id="1" name="play">
@@ -61,8 +55,7 @@
     <wait duration="1000" measure="ms"/>
     <seek position="50" measure="percentage"/>
     <wait duration="1000" measure="ms"/>
-    <seek position="-2000" measure="ms"/>
-    <!--<wait duration="1000" measure="ms"/>-->
+    <seek position="97" measure="percentage"/>
     <wait duration="100" measure="percentage"/>
   </case>
 
@@ -83,45 +76,33 @@
   <case id="5" name="trick play x2">
     <play/>
     <wait duration="1000" measure="ms"/>
-    <playbackrate rate="2" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
-    <seek position="75" measure="percentage"/>
+    <playbackrate rate="2"></playbackrate>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="90" measure="percentage"/>
     <wait duration="1000" measure="ms"/>
-    <playbackrate rate="-2" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <playbackrate rate="-2"></playbackrate>
   </case>
 
   <case id="6" name="trick play x4">
     <play/>
     <wait duration="1000" measure="ms"/>
-    <playbackrate rate="4" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
-    <seek position="70" measure="percentage"/>
+    <playbackrate rate="4"></playbackrate>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="90" measure="percentage"/>
     <wait duration="1000" measure="ms"/>
-    <playbackrate rate="-4" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <playbackrate rate="-4"></playbackrate>
   </case>
 
   <case id="7" name="trick play x8">
     <play/>
     <wait duration="1000" measure="ms"/>
-    <playbackrate rate="8" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
-    <seek position="70" measure="percentage"/>
-    <wait duration="1000" measure="ms"/>
-    <playbackrate rate="-8" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <playbackrate rate="8"></playbackrate>
   </case>
 
   <case id="8" name="trick play x16">
     <play/>
     <wait duration="1000" measure="ms"/>
-    <playbackrate rate="16" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
-    <seek position="70" measure="percentage"/>
-    <wait duration="1000" measure="ms"/>
-    <playbackrate rate="-16" timeout="5000"></playbackrate>
-    <playbackrate rate="1" timeout="1000"></playbackrate>
+    <playbackrate rate="16"></playbackrate>
   </case>
 
   <case id="9" name="resume play">
@@ -163,7 +144,6 @@
   <resume-play position="50"></resume-play> <!-- it might include upper two cases -->
   <!-- end -->
 </rule>
-
 <!-- This is the defnition of test rules -->
 <!-- test cases
 Current Auto-test available TC
