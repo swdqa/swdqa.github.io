@@ -51,11 +51,9 @@
   <case id="2" name="seek">
     <play/>
     <wait duration="1000" measure="ms"/>
-    <seek position="25" measure="percentage"/>
-    <wait duration="1000" measure="ms"/>
     <seek position="50" measure="percentage"/>
     <wait duration="1000" measure="ms"/>
-    <seek position="97" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <wait duration="100" measure="percentage"/>
   </case>
 
