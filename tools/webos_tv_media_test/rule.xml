@@ -68,7 +68,27 @@
     <wait duration="1000" measure="ms"/>
   </case>
 
-  <case id="5" name="trick play x2">
+  <case id="5" name="trick play x1.25">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="1.25"></playbackrate>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="90" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-1.25"></playbackrate>
+  </case>
+  
+  <case id="6" name="trick play x1.5">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="1.5"></playbackrate>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="90" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-1.5"></playbackrate>
+  </case>
+  
+  <case id="7" name="trick play x2">
     <play/>
     <wait duration="1000" measure="ms"/>
     <playbackrate rate="2"></playbackrate>
@@ -77,18 +97,40 @@
     <wait duration="1000" measure="ms"/>
     <playbackrate rate="-2"></playbackrate>
   </case>
+ 
+  <case id="8" name="trick play x4">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="4"></playbackrate>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="90" measure="percentage"/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="-4"></playbackrate>
+  </case>
+ 
+  <case id="9" name="trick play x8">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="8"></playbackrate>
+  </case>
+
+  <case id="10" name="trick play x16">
+    <play/>
+    <wait duration="1000" measure="ms"/>
+    <playbackrate rate="16"></playbackrate>
+  </case>
   
-  <case id="6" name="resume play">
+  <case id="11" name="resume play">
     <resume-play position="50" measure="percentage"/>
     <wait duration="2000" measure="ms"/>
   </case>
 
-  <case id="7" name="preload play">
+  <case id="12" name="preload play">
     <preload-play position="50" measure="percentage"/>
     <wait duration="2000" measure="ms"/>
   </case>
 
-  <case id="8" name="preload preseek">
+  <case id="13" name="preload preseek">
     <preload-preseek position="50" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
   </case>
