@@ -55,7 +55,7 @@
     <wait duration="3000" measure="ms"/>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <wait duration="100" measure="percentage"/>
   </case>
 
@@ -80,7 +80,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <playbackrate rate="-1.25"></playbackrate>
   </case>
   
@@ -91,7 +91,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <playbackrate rate="-1.5"></playbackrate>
   </case>
   
@@ -102,7 +102,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <playbackrate rate="-2"></playbackrate>
   </case>
  
@@ -113,7 +113,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <playbackrate rate="-4"></playbackrate>
   </case>
  
@@ -124,7 +124,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <playbackrate rate="-8"></playbackrate>
   </case>
 
@@ -135,7 +135,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="100" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <playbackrate rate="-16"></playbackrate>
   </case>
   
