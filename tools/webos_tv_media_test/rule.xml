@@ -77,7 +77,6 @@
     <play/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="1.25"></playbackrate>
-    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
     <seek position="99" measure="percentage"/>
@@ -88,7 +87,6 @@
     <play/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="1.5"></playbackrate>
-    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
     <seek position="99" measure="percentage"/>
@@ -99,7 +97,6 @@
     <play/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="2"></playbackrate>
-    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
     <seek position="99" measure="percentage"/>
@@ -110,7 +107,6 @@
     <play/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="4"></playbackrate>
-    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
     <seek position="99" measure="percentage"/>
@@ -121,7 +117,6 @@
     <play/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="8"></playbackrate>
-    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
     <seek position="99" measure="percentage"/>
@@ -132,7 +127,6 @@
     <play/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="16"></playbackrate>
-    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
     <seek position="99" measure="percentage"/>
