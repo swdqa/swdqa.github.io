@@ -79,7 +79,6 @@
     <playbackrate rate="1.25"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="99" measure="percentage"/>
     <playbackrate rate="-1.25"></playbackrate>
   </case>
   
@@ -87,9 +86,9 @@
     <play/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="1.5"></playbackrate>
-    <seek position="0" measure="percentage"/>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="99" measure="percentage"/>
     <playbackrate rate="-1.5"></playbackrate>
   </case>
   
@@ -97,9 +96,9 @@
     <play/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="2"></playbackrate>
-    <seek position="0" measure="percentage"/>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
-    <seek position="99" measure="percentage"/>
     <playbackrate rate="-2"></playbackrate>
   </case>
  
@@ -107,9 +106,9 @@
     <play/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="4"></playbackrate>
-    <seek position="0" measure="percentage"/>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="1" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
-    <seek position="99" measure="percentage"/>
     <playbackrate rate="-4"></playbackrate>
   </case>
  
@@ -117,9 +116,9 @@
     <play/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="8"></playbackrate>
+    <playbackrate rate="1"></playbackrate>
     <seek position="0" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
-    <seek position="99" measure="percentage"/>
     <playbackrate rate="-8"></playbackrate>
   </case>
 
@@ -127,9 +126,9 @@
     <play/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="16"></playbackrate>
-    <seek position="0" measure="percentage"/>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="1" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
-    <seek position="99" measure="percentage"/>
     <playbackrate rate="-16"></playbackrate>
   </case>
   
@@ -139,7 +138,7 @@
   </case>
 
   <case id="12" name="preload play">
-    <preload-play position="0" measure="percentage"/>
+    <preload-play position="1" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
   </case>
 
