@@ -53,7 +53,7 @@
   <case id="2" name="seek">
     <play/>
     <wait duration="3000" measure="ms"/>
-    <seek position="0" measure="percentage"/>
+    <seek position="1" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
     <seek position="99" measure="percentage"/>
     <wait duration="100" measure="percentage"/>
@@ -77,7 +77,8 @@
     <play/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="1.25"></playbackrate>
-    <seek position="0" measure="percentage"/>
+    <playbackrate rate="1"></playbackrate>
+    <seek position="99" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="-1.25"></playbackrate>
   </case>
@@ -87,7 +88,7 @@
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="1.5"></playbackrate>
     <playbackrate rate="1"></playbackrate>
-    <seek position="1" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <wait duration="3000" measure="ms"/>
     <playbackrate rate="-1.5"></playbackrate>
   </case>
@@ -107,7 +108,7 @@
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="4"></playbackrate>
     <playbackrate rate="1"></playbackrate>
-    <seek position="1" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="-4"></playbackrate>
   </case>
@@ -117,7 +118,7 @@
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="8"></playbackrate>
     <playbackrate rate="1"></playbackrate>
-    <seek position="0" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="-8"></playbackrate>
   </case>
@@ -127,13 +128,13 @@
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="16"></playbackrate>
     <playbackrate rate="1"></playbackrate>
-    <seek position="1" measure="percentage"/>
+    <seek position="99" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
     <playbackrate rate="-16"></playbackrate>
   </case>
   
   <case id="11" name="resume play">
-    <resume-play position="0" measure="percentage"/>
+    <resume-play position="1" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
   </case>
 
@@ -143,7 +144,7 @@
   </case>
 
   <case id="13" name="preload preseek">
-    <preload-preseek position="0" measure="percentage"/>
+    <preload-preseek position="1" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
   </case>
   
