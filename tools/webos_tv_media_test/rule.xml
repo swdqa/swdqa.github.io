@@ -90,6 +90,7 @@
     <playbackrate rate="1"></playbackrate>
     <seek position="1" measure="percentage"/>
     <wait duration="5000" measure="ms"/>
+    <seek position="50" measure="percentage"/>
     <playbackrate rate="-1.5"></playbackrate>
   </case>
   
