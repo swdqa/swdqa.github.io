@@ -47,7 +47,7 @@
   <!-- test case definition -->
   <case id="1" name="play">
     <play/>
-    <wait duration="3000" measure="ms"/>
+    <wait duration="5000" measure="ms"/>
   </case>
 
   <case id="2" name="seek">
