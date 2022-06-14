@@ -244,5 +244,5 @@ Attribute need to define types t handle. Below tables are the definition of elem
   | case-id   | unsigned integer                      |
   | adec      | "sw" or "hw"                          |
 
+  변경
 -->
-
